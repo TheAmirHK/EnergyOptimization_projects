@@ -15,11 +15,11 @@ This model optimizes energy dispatch in a renewable-heavy power grid by balancin
 - $w_g^t$ : Binary variable for shutdown of thermal plant $g$ at time $t$
 
 **Parameters**
-- **$C_g$** : Generation cost of thermal plant $g$ ($/MWh)  
-- **$S_g$** : Startup cost of thermal plant $g$ ($)  
-- **$H_g$** : Shutdown cost of thermal plant $g$ ($)  
-- **$C_b$** : Battery storage operational cost ($/MWh)  
-- **$C_{dr}$** : Demand response compensation cost ($/MWh)
+- $C_g$ : Generation cost of thermal plant $g$ ($/MWh)  
+- $S_g$ : Startup cost of thermal plant $g$ ($)  
+- $H_g$ : Shutdown cost of thermal plant $g$ ($)  
+- $C_b$ : Battery storage operational cost ($/MWh)  
+- $C_{dr}$ : Demand response compensation cost ($/MWh)
 
 **Objective Function: Cost Minimization**
 
@@ -41,10 +41,10 @@ $$Battery\quad storage\quad constraints: \quad S_b^t = S_b^{t-1} + \eta_c P_b^t 
 $$Demand\quad response\quad constraints: \quad 0 \leq P_{dr}^t \leq D^t \times \alpha, \quad \forall t$$  
 
 Where:
-- **$D^t$** : Total demand (MW) at time $t$.  
-- **$W^t$** : Available wind power (MW).  
-- **$S^t$** : Available solar power (MW).  
-- **$\eta_c,\eta_d$**: Charging/dischrging efficiency ($`0 < η_c ≤ 1`$).  
+- $D^t$ : Total demand (MW) at time $t$.  
+- $W^t$ : Available wind power (MW).  
+- $S^t$ : Available solar power (MW).  
+- $\eta_c,\eta_d$: Charging/dischrging efficiency ($`0 < η_c ≤ 1`$).  
 - $S_b^t$ : State-of-charge at time $t$ (MWh).  
 - $P_b^t$ : Power flow into/out of the battery (MW).  
-- **$\alpha$** : Maximum percentage of demand that can be curtailed. ($0 ≤ α ≤ 1$).  
+- $\alpha$ : Maximum percentage of demand that can be curtailed. ($0 ≤ α ≤ 1$).  
